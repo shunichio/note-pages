@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7Csource+code+pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;shunichio.github.io&quot;,&quot;root&quot;:&quot;&#x2F;blog&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;blog&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:&quot;gitalk&quot;,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null,&quot;activeClass&quot;:&quot;gitalk&quot;},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;blog&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="坐标系Three.js 的坐标系是遵循右手坐标系，如下图：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Three.js 初探">
+<meta property="og:url" content="https://shunichio.github.io/blog/2020/11/05/threejs/">
+<meta property="og:site_name" content="牧野の自留地">
+<meta property="og:description" content="坐标系Three.js 的坐标系是遵循右手坐标系，如下图：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/shunichio/upic/raw/master/avatar/coordinate.jpg">
+<meta property="og:image" content="https://gitee.com/shunichio/upic/raw/master/avatar/perspective_camera.png">
+<meta property="article:published_time" content="2020-11-05T14:54:35.000Z">
+<meta property="article:modified_time" content="2021-07-11T05:57:29.885Z">
+<meta property="article:author" content="牧野ξ">
+<meta property="article:tag" content="Javascript">
+<meta property="article:tag" content="Three.js">
+<meta property="article:tag" content="WebGL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/shunichio/upic/raw/master/avatar/coordinate.jpg">
+
+
+<link rel="canonical" href="https://shunichio.github.io/blog/2020/11/05/threejs/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;shunichio.github.io&#x2F;blog&#x2F;2020&#x2F;11&#x2F;05&#x2F;threejs&#x2F;&quot;,&quot;path&quot;:&quot;2020&#x2F;11&#x2F;05&#x2F;threejs&#x2F;&quot;,&quot;title&quot;:&quot;Three.js 初探&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Three.js 初探 | 牧野の自留地</title><script src="/blog/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/blog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">牧野の自留地</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">凡是过往 皆为序章</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/blog/./" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/blog/./about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/blog/./tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/blog/./categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/blog/./archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.</span> <span class="nav-text">坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%84%E5%83%8F%E6%9C%BA"><span class="nav-number">2.</span> <span class="nav-text">摄像机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%8F%E8%A7%86%E6%91%84%E5%83%8F%E6%9C%BA"><span class="nav-number">2.1.</span> <span class="nav-text">透视摄像机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E6%8A%95%E5%BD%B1%E6%91%84%E5%83%8F%E6%9C%BA"><span class="nav-number">2.2.</span> <span class="nav-text">正交投影摄像机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E6%9C%BA%E5%92%8C%E6%B8%B2%E6%9F%93%E5%99%A8%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">相机和渲染器的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E4%BD%93"><span class="nav-number">4.</span> <span class="nav-text">几何体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E5%BD%A2%E7%8A%B6-%E5%B9%B3%E9%9D%A2"><span class="nav-number">4.1.</span> <span class="nav-text">创建平面几何形状(平面)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9A%A0%EF%B8%8F%E2%9A%A0%EF%B8%8F%E2%9A%A0%EF%B8%8F-%E6%B3%A8%E6%84%8F-%E2%9A%A0%EF%B8%8F%E2%9A%A0%EF%B8%8F%E2%9A%A0%EF%B8%8F"><span class="nav-number">4.2.</span> <span class="nav-text">⚠️⚠️⚠️ 注意 ⚠️⚠️⚠️</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="牧野ξ"
+      src="/blog/uploads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">牧野ξ</p>
+  <div class="site-description" itemprop="description">自留地，前端笔记，日记，日常记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/./archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/./categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/./tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shunichio" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shunichio" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ismartgoo@gmail.com" title="E-Mail → mailto:ismartgoo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tcmiao.com/" title="https:&#x2F;&#x2F;www.tcmiao.com" rel="noopener" target="_blank">tcmiao</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://hentaizhou.github.io/z-blog" title="https:&#x2F;&#x2F;hentaizhou.github.io&#x2F;z-blog" rel="noopener" target="_blank">collie Z</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://shunichio.github.io/docsify/notes" title="https:&#x2F;&#x2F;shunichio.github.io&#x2F;docsify&#x2F;notes">notes</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shunichio.github.io/blog/2020/11/05/threejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/uploads/images/avatar.png">
+      <meta itemprop="name" content="牧野ξ">
+      <meta itemprop="description" content="自留地，前端笔记，日记，日常记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="牧野の自留地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Three.js 初探
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-05 14:54:35" itemprop="dateCreated datePublished" datetime="2020-11-05T14:54:35+00:00">2020-11-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/blog/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h2><p>Three.js 的坐标系是遵循右手坐标系，如下图：</p>
+<span id="more"></span>
+
+<p><img src="https://gitee.com/shunichio/upic/raw/master/avatar/coordinate.jpg" alt="ThreeJS 坐标系"></p>
+<center>坐标系图示</center>
+
+<p>坐标系的原点在画布中心（canvas.width / 2, canvas.height / 2）</p>
+<p>补充一点：对于旋转 cube.rotation 正值是逆时针旋转，负值是顺时针旋转。</p>
+<h2 id="摄像机"><a href="#摄像机" class="headerlink" title="摄像机"></a>摄像机</h2><p>Three.js 一共提供了 4 种摄像机：PerspectiveCamera 透视摄像机、OrthographicCamera 正交投影摄像机、CubeCamera 全景摄像机、StereoCamera 3D 摄像机。摄像机的初始位置位于坐标系原点，并且往 <strong>屏幕里</strong> 看，能看到的范围即近平面和远平面之间的范围。</p>
+<h3 id="透视摄像机"><a href="#透视摄像机" class="headerlink" title="透视摄像机"></a>透视摄像机</h3><p>透视相机拍摄的效果类似人眼所见，即有近小远大的效果</p>
+<p>透视相机的构造方法如下：<br>PerspectiveCamera( fov, aspect, near, far )<br>fov 参数指定视角，aspect 指定视图宽高比，后两个参数指定近平面和远平面。透视相机的视域是一个台体</p>
+<p><img src="https://gitee.com/shunichio/upic/raw/master/avatar/perspective_camera.png" alt="ThreeJS 摄像机"></p>
+<center>透视摄像机的参数图示</center>
+
+<h3 id="正交投影摄像机"><a href="#正交投影摄像机" class="headerlink" title="正交投影摄像机"></a>正交投影摄像机</h3><p>正交相机重在表现物体的实际尺寸，没有近小远大的效果</p>
+<p>正交相机的构造方法如下：OrthographicCamera( left, right, top, bottom, near, far )<br>这个六个参数即是指定视域的左右上下近远六个范围，正交相机的视域是立方体</p>
+<h2 id="相机和渲染器的关系"><a href="#相机和渲染器的关系" class="headerlink" title="相机和渲染器的关系"></a>相机和渲染器的关系</h2><p>在 threejs 中，渲染器可以视为是 <code>&lt;canvas&gt;</code> 标签，相机可以视为画布。注意画布和 <code>&lt;canvas&gt;</code> 标签不是同一个东西， <code>&lt;canvas&gt;</code> 标签是画布的容器。画布就好比一张图片，而 <code>&lt;canvas&gt;</code> 标签就像 <code>&lt;img&gt;</code> 标签。</p>
+<h2 id="几何体"><a href="#几何体" class="headerlink" title="几何体"></a>几何体</h2><p>从 Three.js 文档目录的 Geometries 可看到，Three.js 已为我们提供了很多现成的几何体。</p>
+<ul>
+<li>BoxGeometry 是四边形几何类, 它通常用给定的长宽高参数构造立方体或不规则四边形</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// width — X轴上面的宽度，默认值为1。</span></span><br><span class="line"><span class="comment">// height — Y轴上面的高度，默认值为1。</span></span><br><span class="line"><span class="comment">// depth — Z轴上面的深度，默认值为1。</span></span><br><span class="line"><span class="comment">// widthSegments — （可选）宽度的分段数，默认值是1。</span></span><br><span class="line"><span class="comment">// heightSegments — （可选）宽度的分段数，默认值是1。</span></span><br><span class="line"><span class="comment">// depthSegments — （可选）宽度的分段数，默认值是1。</span></span><br><span class="line">THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>PlaneGeometry 是平面类, 其实是一个长方形，而不是数学意义上无限大小的平面</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THREE.PlaneGeometry(width, height, widthSegments, heightSegments)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>SphereGeometry 是球体类, 构造函数如下所示 ( radius 是半径； segmentsWidth 表示经度上的切片数； segmentsHeight 表示纬度上的切片数； phiStart 表示经度开始的弧度； phiLength 表示经度跨过的弧度； thetaStart 表示纬度开始的弧度； thetaLength 表示纬度跨过的弧度), 其中需要注意的是在使用时可以根据经纬度切片数来定制球形外形, 可以通过经纬度弧度来定制球形起始形状</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THREE.SphereGeometry(radius, segmentsWidth, segmentsHeight, phiStart, phiLength, thetaStart, thetaLength)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>CircleGeometry 几何类可以创建圆形或者扇形</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THREE.CircleGeometry(radius, segments, thetaStart, thetaLength)</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建平面几何形状-平面"><a href="#创建平面几何形状-平面" class="headerlink" title="创建平面几何形状(平面)"></a>创建平面几何形状(平面)</h3><p>平面几何形状有三种：点，线，面三种，下面说说用 threejs 创建这几种形状的方法。</p>
+<p>创建点可以使用 Points 类</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPoints</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//创建一个Geometry，并添加点</span></span><br><span class="line">  <span class="keyword">let</span> geometry = <span class="keyword">new</span> THREE.Geometry()</span><br><span class="line">  geometry.vertices.push(<span class="keyword">new</span> THREE.Vector3(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">  geometry.vertices.push(<span class="keyword">new</span> THREE.Vector3(<span class="number">15</span>, <span class="number">15</span>, <span class="number">0</span>))</span><br><span class="line">  geometry.vertices.push(<span class="keyword">new</span> THREE.Vector3(-<span class="number">15</span>, <span class="number">2</span>, <span class="number">0</span>)) <span class="comment">//使用PointsMaterial，记得加上size属性，用来设置点的大小</span></span><br><span class="line">  <span class="keyword">let</span> material = <span class="keyword">new</span> THREE.PointsMaterial(&#123; <span class="attr">color</span>: <span class="number">0xff0000</span>, <span class="attr">size</span>: <span class="number">4</span> &#125;)</span><br><span class="line">  <span class="keyword">let</span> points = <span class="keyword">new</span> THREE.Points(geometry, material)</span><br><span class="line">  <span class="keyword">return</span> points</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建线可以使用 Line 类</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createLine</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> geometry = <span class="keyword">new</span> THREE.Geometry()</span><br><span class="line">  geometry.vertices.push(<span class="keyword">new</span> THREE.Vector3(<span class="number">15</span>, <span class="number">15</span>, <span class="number">0</span>))</span><br><span class="line">  geometry.vertices.push(<span class="keyword">new</span> THREE.Vector3(-<span class="number">15</span>, <span class="number">2</span>, <span class="number">0</span>))</span><br><span class="line">  <span class="keyword">let</span> material = <span class="keyword">new</span> THREE.LineBasicMaterial(&#123; <span class="attr">color</span>: <span class="number">0xff0000</span> &#125;) <span class="comment">//注意这里使用的是LineBasicMaterial</span></span><br><span class="line">  <span class="keyword">let</span> line = <span class="keyword">new</span> THREE.Line(geometry, material)</span><br><span class="line">  <span class="keyword">return</span> line</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="⚠️⚠️⚠️-注意-⚠️⚠️⚠️"><a href="#⚠️⚠️⚠️-注意-⚠️⚠️⚠️" class="headerlink" title="⚠️⚠️⚠️ 注意 ⚠️⚠️⚠️"></a>⚠️⚠️⚠️ 注意 ⚠️⚠️⚠️</h3><p>当我们的几何体或者平面创建出来以后，我们可以把它看作为 <strong>透明</strong> 的，必须为其披上一层外衣（材质），我们的摄像机才能看见它并记录下来。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>给我买一杯咖啡</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/blog/uploads/images/wechat.JPG" alt="牧野ξ 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/blog/uploads/images/alipay.JPG" alt="牧野ξ 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/blog/tags/Javascript/" rel="tag"><i class="fa fa-tag"></i> Javascript</a>
+              <a href="/blog/tags/Three-js/" rel="tag"><i class="fa fa-tag"></i> Three.js</a>
+              <a href="/blog/tags/WebGL/" rel="tag"><i class="fa fa-tag"></i> WebGL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/blog/2020/11/02/vue3-notes/" rel="prev" title="Vue3 笔记">
+                  <i class="fa fa-chevron-left"></i> Vue3 笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/blog/2020/12/02/github-action-deploy-web-page/" rel="next" title="利用 GitHub Action 部署静态网页或者博客">
+                  利用 GitHub Action 部署静态网页或者博客 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div><script src="/blog/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">牧野ξ</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script><script src="/blog/js/next-boot.js"></script>
+
+  
+<script src="/blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css">
+
+<script class="next-config" data-name="gitalk" type="application/json">{&quot;enable&quot;:true,&quot;github_id&quot;:&quot;shunichio&quot;,&quot;repo&quot;:&quot;blog&quot;,&quot;client_id&quot;:&quot;c3cc68364f4467a2a082&quot;,&quot;client_secret&quot;:&quot;980bc7da5a170dbc25288db00b6d74d5cbd3d392&quot;,&quot;admin_user&quot;:&quot;shunichio&quot;,&quot;distraction_free_mode&quot;:true,&quot;proxy&quot;:&quot;https:&#x2F;&#x2F;cors-anywhere.azm.workers.dev&#x2F;https:&#x2F;&#x2F;github.com&#x2F;login&#x2F;oauth&#x2F;access_token&quot;,&quot;language&quot;:&quot;zh-CN&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1.7.2&#x2F;dist&#x2F;gitalk.min.js&quot;,&quot;path_md5&quot;:&quot;2f62593fbed05a7db403abfb2f32ff14&quot;}</script>
+<script src="/blog/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

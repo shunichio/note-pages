@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg">
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7Csource+code+pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;shunichio.github.io&quot;,&quot;root&quot;:&quot;&#x2F;blog&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;blog&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:&quot;gitalk&quot;,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null,&quot;activeClass&quot;:&quot;gitalk&quot;},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;blog&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="NodeJS.npmrc 配置 123456registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;sass_binary_site&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node-sasschromedriver_cdnurl&#x3D;https:&amp;#x2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工具设置">
+<meta property="og:url" content="https://shunichio.github.io/blog/2021/03/07/formulae-settings/">
+<meta property="og:site_name" content="牧野の自留地">
+<meta property="og:description" content="NodeJS.npmrc 配置 123456registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;sass_binary_site&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node-sasschromedriver_cdnurl&#x3D;https:&amp;#x2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/2021/03/07/12/55/iterm2-%E8%93%9D%E8%89%B2%E4%B8%89%E8%A7%92%E5%BD%A2.jpeg">
+<meta property="article:published_time" content="2021-03-07T15:25:14.000Z">
+<meta property="article:modified_time" content="2021-07-11T05:57:29.885Z">
+<meta property="article:author" content="牧野ξ">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="软件">
+<meta property="article:tag" content="设置">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/2021/03/07/12/55/iterm2-%E8%93%9D%E8%89%B2%E4%B8%89%E8%A7%92%E5%BD%A2.jpeg">
+
+
+<link rel="canonical" href="https://shunichio.github.io/blog/2021/03/07/formulae-settings/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;shunichio.github.io&#x2F;blog&#x2F;2021&#x2F;03&#x2F;07&#x2F;formulae-settings&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;03&#x2F;07&#x2F;formulae-settings&#x2F;&quot;,&quot;title&quot;:&quot;工具设置&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>工具设置 | 牧野の自留地</title><script src="/blog/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/blog/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">牧野の自留地</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">凡是过往 皆为序章</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/blog/./" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/blog/./about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/blog/./tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/blog/./categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/blog/./archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NodeJS"><span class="nav-number">1.</span> <span class="nav-text">NodeJS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Homebrew"><span class="nav-number">3.</span> <span class="nav-text">Homebrew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Alfred"><span class="nav-number">4.</span> <span class="nav-text">Alfred</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE%EF%BC%88%E5%AD%97%E4%BD%93%E3%80%81%E9%A2%9C%E8%89%B2%EF%BC%89"><span class="nav-number">4.1.</span> <span class="nav-text">外观设置（字体、颜色）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visual-Studio-Code"><span class="nav-number">5.</span> <span class="nav-text">Visual Studio Code</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">5.1.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90%E5%8F%8A%E4%BD%BF%E7%94%A8"><span class="nav-number">5.2.</span> <span class="nav-text">插件推荐及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REST-Client"><span class="nav-number">5.2.1.</span> <span class="nav-text">REST Client</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">5.2.1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">5.2.1.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%A4%BA%E4%BE%8B"><span class="nav-number">5.2.1.3.</span> <span class="nav-text">配置文件示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="nav-number">5.3.</span> <span class="nav-text">其他问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VS-Code-%E4%B8%AD%E8%B7%AF%E5%BE%84%E5%88%AB%E5%90%8D-%E6%8F%90%E7%A4%BA%E5%92%8C%E5%87%BD%E6%95%B0%E8%B7%B3%E8%BD%AC%E7%AD%89%E9%97%AE%E9%A2%98"><span class="nav-number">5.3.1.</span> <span class="nav-text">VS Code 中路径别名 @ 提示和函数跳转等问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iTerm2"><span class="nav-number">6.</span> <span class="nav-text">iTerm2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85"><span class="nav-number">6.1.</span> <span class="nav-text">如何一键安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8E%BB%E9%99%A4%E8%93%9D%E8%89%B2%E4%B8%89%E8%A7%92%E5%BD%A2%EF%BC%9F"><span class="nav-number">6.2.</span> <span class="nav-text">如何去除蓝色三角形？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ohmyzsh-%E4%B8%BB%E9%A2%98-starship-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-config-starship-toml"><span class="nav-number">6.3.</span> <span class="nav-text">ohmyzsh 主题 starship 配置文件(~&#x2F;.config&#x2F;starship.toml)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-Terminal"><span class="nav-number">7.</span> <span class="nav-text">Windows Terminal</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%9A%84%E6%A8%A1%E5%9D%97%E5%92%8C-PowerLine-%E4%B8%BB%E9%A2%98"><span class="nav-number">7.1.</span> <span class="nav-text">第一步：安装相关的模块和 PowerLine 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%B3%A8%E5%86%8C%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93"><span class="nav-number">7.2.</span> <span class="nav-text">第二步：注册安装字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%94%B9%E9%80%A0%E7%BB%88%E7%AB%AF%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">7.3.</span> <span class="nav-text">第三步：改造终端的配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E9%80%89%E9%A2%9C%E8%89%B2%E4%B8%BB%E9%A2%98"><span class="nav-number">7.4.</span> <span class="nav-text">第四步：选颜色主题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="牧野ξ"
+      src="/blog/uploads/images/avatar.png">
+  <p class="site-author-name" itemprop="name">牧野ξ</p>
+  <div class="site-description" itemprop="description">自留地，前端笔记，日记，日常记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/./archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/./categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/./tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shunichio" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shunichio" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ismartgoo@gmail.com" title="E-Mail → mailto:ismartgoo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.tcmiao.com/" title="https:&#x2F;&#x2F;www.tcmiao.com" rel="noopener" target="_blank">tcmiao</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://hentaizhou.github.io/z-blog" title="https:&#x2F;&#x2F;hentaizhou.github.io&#x2F;z-blog" rel="noopener" target="_blank">collie Z</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://shunichio.github.io/docsify/notes" title="https:&#x2F;&#x2F;shunichio.github.io&#x2F;docsify&#x2F;notes">notes</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shunichio.github.io/blog/2021/03/07/formulae-settings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/uploads/images/avatar.png">
+      <meta itemprop="name" content="牧野ξ">
+      <meta itemprop="description" content="自留地，前端笔记，日记，日常记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="牧野の自留地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          工具设置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-07 15:25:14" itemprop="dateCreated datePublished" datetime="2021-03-07T15:25:14+00:00">2021-03-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/blog/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS"></a>NodeJS</h1><p><code>.npmrc</code> 配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;</span><br><span class="line">sass_binary_site&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node-sass</span><br><span class="line">chromedriver_cdnurl&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;chromedriver</span><br><span class="line">phantomjs_cdnurl&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;phantomjs</span><br><span class="line">electron_mirror&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;electron</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>该文件的一般路径为：<code>~/.npmrc</code></p>
+<span id="more"></span>
+
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p>大多数时候，我们的机器上会有很多的 Git Host，比如公司 Gitlab、 Github、 OSChina 等，那我们就需要在本地配置多个 SSH Key，使得不同的 Host 能使用不同的 SSH Key 。配置方法如下（以公司 Gitlab 和个人 Github 为例）：</p>
+<p>为公司 Gitlab 生成一对秘钥 SSH Key</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#x27;youremail@xxx.com&#x27; -f ~/.ssh/gitlab_id-rsa</span><br></pre></td></tr></table></figure>
+
+<p>为个人 Github 生成一对秘钥 SSH Key</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#x27;yourotheremail@xxx.com&#x27; -f ~/.ssh/github_id-rsa</span><br></pre></td></tr></table></figure>
+
+<p>这时去查看 <code>~/.ssh</code> 目录下的文件，会有 <code>gitlab_id-rsa</code>、 <code>gitlab_id-rsa.pub</code> 和 <code>github_id-rsa</code>、 <code>github_id-rsa.pub</code> 四个文件</p>
+<p>在 <code>~/.ssh</code> 目录下新建名称为 <code>config</code> 的文件（无后缀名）。用于配置多个不同的 host 使用不同的 SSH Key，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 配置文件参数</span><br><span class="line"># Host : Host 可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和 ssh 文件（根据实际情况进行修改）</span><br><span class="line"># HostName : 要登录主机的主机名（根据实际情况进行修改）</span><br><span class="line"># User : 登录名，一般是 ssh 路径中主机名的前缀</span><br><span class="line"># IdentityFile : 指明上面 User 对应的 identityFile 路径</span><br><span class="line"></span><br><span class="line"># gitlab</span><br><span class="line">Host gitlab.com</span><br><span class="line">HostName gitlab.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;gitlab_id-rsa</span><br><span class="line"></span><br><span class="line"># github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">User git</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;github_id-rsa</span><br></pre></td></tr></table></figure>
+
+<p>按照上面的步骤分别往 Gitlab 和 Github 上添加生成的公钥 <code>gitlab_id-rsa.pub</code> 和 <code>github_id-rsa.pub</code></p>
+<p>OK，大功告成，再次执行 git 命令验证就已经不需要再次验证权限了。</p>
+<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>详细教程，请参考：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/">Homebrew 国内镜像使用教程</a></p>
+<h1 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a>Alfred</h1><h2 id="外观设置（字体、颜色）"><a href="#外观设置（字体、颜色）" class="headerlink" title="外观设置（字体、颜色）"></a>外观设置（字体、颜色）</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;alfredtheme&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;result&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;textSpacing&quot;</span>: <span class="number">7</span>,</span><br><span class="line">      <span class="attr">&quot;subtext&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;size&quot;</span>: <span class="number">20</span>,</span><br><span class="line">        <span class="attr">&quot;colorSelected&quot;</span>: <span class="string">&quot;#FFFFFFA7&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;font&quot;</span>: <span class="string">&quot;FZJingLeiS-R-GB&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#FFFFFF4F&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">&quot;shortcut&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;size&quot;</span>: <span class="number">24</span>,</span><br><span class="line">        <span class="attr">&quot;colorSelected&quot;</span>: <span class="string">&quot;#FFFFFF9E&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;font&quot;</span>: <span class="string">&quot;FZJingLeiS-R-GB&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#FFD478FF&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">&quot;backgroundSelected&quot;</span>: <span class="string">&quot;#00000051&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;text&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;size&quot;</span>: <span class="number">30</span>,</span><br><span class="line">        <span class="attr">&quot;colorSelected&quot;</span>: <span class="string">&quot;#37ADFFFF&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;font&quot;</span>: <span class="string">&quot;FZJingLeiS-R-GB&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#FFFFFF8A&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">&quot;iconPaddingHorizontal&quot;</span>: <span class="number">6</span>,</span><br><span class="line">      <span class="attr">&quot;roundness&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">&quot;paddingVertical&quot;</span>: <span class="number">3</span>,</span><br><span class="line">      <span class="attr">&quot;iconSize&quot;</span>: <span class="number">44</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;search&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;background&quot;</span>: <span class="string">&quot;#00000000&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;paddingVertical&quot;</span>: <span class="number">5</span>,</span><br><span class="line">      <span class="attr">&quot;spacing&quot;</span>: <span class="number">5</span>,</span><br><span class="line">      <span class="attr">&quot;text&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;size&quot;</span>: <span class="number">36</span>,</span><br><span class="line">        <span class="attr">&quot;colorSelected&quot;</span>: <span class="string">&quot;#000000FF&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;font&quot;</span>: <span class="string">&quot;FZJingLeiS-R-GB&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#FFFFFFFF&quot;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">&quot;roundness&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">&quot;backgroundSelected&quot;</span>: <span class="string">&quot;#B2D7FFFF&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;window&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#00000085&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;paddingHorizontal&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">&quot;width&quot;</span>: <span class="number">573</span>,</span><br><span class="line">      <span class="attr">&quot;borderPadding&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">&quot;borderColor&quot;</span>: <span class="string">&quot;#000000FF&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;blur&quot;</span>: <span class="number">25</span>,</span><br><span class="line">      <span class="attr">&quot;roundness&quot;</span>: <span class="number">3</span>,</span><br><span class="line">      <span class="attr">&quot;paddingVertical&quot;</span>: <span class="number">5</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;credit&quot;</span>: <span class="string">&quot;.·°oO&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;separator&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#CD00FFFF&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;thickness&quot;</span>: <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;scrollbar&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;color&quot;</span>: <span class="string">&quot;#00000033&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;thickness&quot;</span>: <span class="number">3</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;MuYesAlfredTheme&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复制以上代码，生成 <code>customized.alfredappearance</code> 文件，双击即可。字体使用的是<a target="_blank" rel="noopener" href="https://gitee.com/shunichio/upic/raw/master/uPic/2021-03-10/FZJLJW.ttf">方正静蕾体</a></strong></p>
+<p>详细教程，请参考：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904062484217863">高效 Alfred 进阶</a></p>
+<h1 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>删除行内容： <code>command + shift + k</code></li>
+<li>删除左侧内容： <code>command + backspace</code></li>
+<li>删除右侧内容： <code>command + delete</code></li>
+<li>移动到行首行尾：<code>command + ←</code> 、 <code>command + →</code></li>
+<li>上下移动： <code>option + ↑</code> 、 <code>option + ↓</code></li>
+<li>移动到文档的开头和末尾： <code>command + ↑</code> 、 <code>command + ↓</code></li>
+<li>回到上一个光标的位置： <code>command + u</code></li>
+<li>花括号跳转： <code>command + shift + \</code></li>
+<li>块注释： <code>Option + Shift + a</code></li>
+<li>快速打开文件： <code>command + p</code></li>
+</ul>
+<h2 id="插件推荐及使用"><a href="#插件推荐及使用" class="headerlink" title="插件推荐及使用"></a>插件推荐及使用</h2><h3 id="REST-Client"><a href="#REST-Client" class="headerlink" title="REST Client"></a>REST Client</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>在测试 REST API 的时候，想必大家都会有不同的工具选择。如果是基于 CLI 的话，大家应该会选择 cURL。如果是 GUI 工具的话，相信很多人都会使用 Postman。不过今天，如果开发是使用 vs code，那么我推荐 REST Client 插件</p>
+<p>我们在 vs code 新建一个以 <code>.http</code> 或者 <code>.rest</code> 结尾的文件，填入你的 HTTP 请求，点击 Send Request，或者右键选择 Send Request，或者直接用快捷键 Ctrl+Alt+R ，你的 REST API 就执行了，然后 API Response 就会显示在右边区域。是不是很方便？</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>通过 <code>###</code> 分隔符，同一个 HTTP 文件里可以涵盖多个 HTTP 请求。</li>
+<li>Authentication: REST Client 支持了 Basic Auth，SSL Client Certificates，Azure Active Directory 等多种验证机制</li>
+<li>Cookies 的支持</li>
+<li>支持 HTTP 3xx 的重定向</li>
+<li>变量的支持：环境变量，文件变量，预定义的系统变量等等</li>
+</ol>
+<h4 id="配置文件示例"><a href="#配置文件示例" class="headerlink" title="配置文件示例"></a>配置文件示例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">@hostname &#x3D; api.example.com</span><br><span class="line">@port &#x3D; 8080</span><br><span class="line">@host &#x3D; &#123;&#123;hostname&#125;&#125;:&#123;&#123;port&#125;&#125;</span><br><span class="line">@contentType &#x3D; application&#x2F;json</span><br><span class="line"></span><br><span class="line">###</span><br><span class="line">@name &#x3D; hello</span><br><span class="line"></span><br><span class="line"># @name login</span><br><span class="line">POST https:&#x2F;&#x2F;&#123;&#123;host&#125;&#125;&#x2F;api&#x2F;user&#x2F;login HTTP&#x2F;1.1</span><br><span class="line"></span><br><span class="line">content-type: &#123;&#123;contentType&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;username&quot;:&#123;&#123;name&#125;&#125;,</span><br><span class="line">  &quot;password&quot;:&quot;123&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">###</span><br><span class="line">@authToken &#x3D; &#123;&#123;login.response.body.result.data.token&#125;&#125;</span><br><span class="line"></span><br><span class="line"># @name userInfo</span><br><span class="line">GET https:&#x2F;&#x2F;&#123;&#123;host&#125;&#125;&#x2F;api&#x2F;user&#x2F;info HTTP&#x2F;1.1</span><br><span class="line"></span><br><span class="line">Content-Type: &#123;&#123;contentType&#125;&#125;</span><br><span class="line">X-Authorization:&#123;&#123;authToken&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><h3 id="VS-Code-中路径别名-提示和函数跳转等问题"><a href="#VS-Code-中路径别名-提示和函数跳转等问题" class="headerlink" title="VS Code 中路径别名 @ 提示和函数跳转等问题"></a>VS Code 中路径别名 <code>@</code> 提示和函数跳转等问题</h3><ul>
+<li>如果我们用了路径别名 <code>@</code> 等，那么我们的插件 <code>path-intellisense</code> 将默认不支持自动提示，但是我们对这个插件的 <code>mappings</code> 设置如下，就可以了。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &#x2F;&#x2F; setting.json</span><br><span class="line">  &quot;path-intellisense.mappings&quot;: &#123;</span><br><span class="line">    &quot;@&quot;: &quot;$&#123;workspaceRoot&#125;&#x2F;src&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>我们希望 Ctrl + 鼠标左键点击一个外部方法时，能够快速跳转到对应的外部文件，很多人说 Webstorm 都可以，其实 VS Code 也可以，同样的原因，之所以不能跳转，也是因为路径别名 <code>@</code> 不能被 VS Code 识别，所以我们同样需要在 VS Code 里面做映射。在项目 <code>package.json</code> 所在同级目录下创建文件<code>jsconfig.json</code> ,写上如下配置即可。</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;target&quot;</span>: <span class="string">&quot;ES6&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;module&quot;</span>: <span class="string">&quot;commonjs&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;allowSyntheticDefaultImports&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;paths&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;@/*&quot;</span>: [<span class="string">&quot;src/*&quot;</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;exclude&quot;</span>: [<span class="string">&quot;node_modules&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="iTerm2"><a href="#iTerm2" class="headerlink" title="iTerm2"></a>iTerm2</h1><h2 id="如何一键安装"><a href="#如何一键安装" class="headerlink" title="如何一键安装"></a>如何一键安装</h2><p>国内：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://code.aliyun.com/kar/ohmyiterm2/raw/master/install.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> aliyun</span><br></pre></td></tr></table></figure>
+
+<p>国外：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/KingFalse/ohmyiterm2/master/install.sh)</span>&quot;</span> <span class="string">&quot;&quot;</span> github</span><br></pre></td></tr></table></figure>
+
+<p><strong>它安装了什么</strong></p>
+<ul>
+<li>安装 Xcode Command Line Tools</li>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/paulirish/git-open">ohmyzsh 插件 git-open</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions">ohmyzsh 插件 zsh-autosuggestions</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting">ohmyzsh 插件 zsh-syntax-highlighting</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/wting/autojump">ohmyzsh 插件 autojump</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://starship.rs/">ohmyzsh 主题 starship</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://iterm2.com/">iTerm2</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://www.iterm2.com/documentation-utilities.html">iTerm2-Utilities 扩展</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/dracula/iterm">iTerm2-Dracula 主题</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://ohse.de/uwe/software/lrzsz.html">lrzsz 并配置 Triggers</a></li>
+<li>安装 sshpass</li>
+</ul>
+<h2 id="如何去除蓝色三角形？"><a href="#如何去除蓝色三角形？" class="headerlink" title="如何去除蓝色三角形？"></a>如何去除蓝色三角形？</h2><p><img src="https://cdn.jsdelivr.net/gh/shunichio/picture-store@master/uPic/2021/03/07/12/55/iterm2-%E8%93%9D%E8%89%B2%E4%B8%89%E8%A7%92%E5%BD%A2.jpeg" alt="操作示例"></p>
+<h2 id="ohmyzsh-主题-starship-配置文件-config-starship-toml"><a href="#ohmyzsh-主题-starship-配置文件-config-starship-toml" class="headerlink" title="ohmyzsh 主题 starship 配置文件(~/.config/starship.toml)"></a><a target="_blank" rel="noopener" href="https://starship.rs/">ohmyzsh 主题 starship</a> 配置文件(~/.config/starship.toml)</h2><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Don&#x27;t print a new line at the start of the prompt</span></span><br><span class="line"><span class="attr">add_newline</span> = <span class="literal">false</span></span><br><span class="line"><span class="section">[aws]</span></span><br><span class="line"><span class="attr">disabled</span> = <span class="literal">true</span></span><br><span class="line"><span class="section">[battery]</span></span><br><span class="line"><span class="attr">disabled</span> = <span class="literal">true</span></span><br><span class="line"><span class="comment"># Replace the &quot;❯&quot; symbol in the prompt with &quot;➜&quot;</span></span><br><span class="line"><span class="section">[character]</span></span><br><span class="line"><span class="attr">success_symbol</span> = <span class="string">&quot;[➜](bold green)&quot;</span></span><br><span class="line"><span class="attr">error_symbol</span> = <span class="string">&quot;[✗](bold red)&quot;</span></span><br><span class="line"><span class="attr">symbol</span> = <span class="string">&quot;[➜](bold green)&quot;</span></span><br><span class="line"><span class="section">[line_break]</span></span><br><span class="line"><span class="attr">disabled</span> = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Windows-Terminal"><a href="#Windows-Terminal" class="headerlink" title="Windows Terminal"></a>Windows Terminal</h1><h2 id="第一步：安装相关的模块和-PowerLine-主题"><a href="#第一步：安装相关的模块和-PowerLine-主题" class="headerlink" title="第一步：安装相关的模块和 PowerLine 主题"></a>第一步：安装相关的模块和 <code>PowerLine</code> 主题</h2><p>如果你使用管理员权限打开 PowerShell 并且想把 oh-my-posh 安装到所有用户，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Install-Module posh-git</span><br><span class="line">Install-Module oh-my-posh</span><br></pre></td></tr></table></figure>
+
+<p>否则输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme PowerLine</span><br></pre></td></tr></table></figure>
+
+<p>如果出现以下报错</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 无法加载文件 C:\Users\Hong\Documents\WindowsPowerShell\Microsoft.PowerShell</span><br><span class="line">_profile.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 http://go.micros</span><br><span class="line">oft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。</span><br><span class="line">所在位置 行:1 字符: 3</span><br></pre></td></tr></table></figure>
+
+<p>以管理员身份再次运行 Windows Terminal 并输入以下命令。（没有报错请忽略）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
+<p>但是这次使用 <code>Import-Module</code> 的指令，再次启动 <code>PowerShell</code> 就会发现没有效果，这是因为这些指令仅限于本次会话的 <code>PowerShell</code> 有效，因此，若要使这一效果在每次启动的时候都有效，那就要将其添加到启动脚本中。打开<code>~\Documents\WindowsPowerShell</code>新建文本文档，命名为<code>Microsoft.PowerShell_profile.ps1</code>（记得开拓展名显示），输入以下内容，保存。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme PowerLine</span><br></pre></td></tr></table></figure>
+
+<p>这样，在每次 <code>PoweShell</code> 打开的时候都会加载自定义的文件并启用 <code>PowerLine</code> 主题。</p>
+<h2 id="第二步：注册安装字体"><a href="#第二步：注册安装字体" class="headerlink" title="第二步：注册安装字体"></a>第二步：注册安装字体</h2><p>这里使用的是更纱等距黑体，即 <code>Sarasa Term SC</code> 这个名称配置 <code>windows Terminal</code> 字体时要用到（记得有这回事）要不然小图标还是乱码。这款字体是开源字体，可以美观地显示中文，而且是等宽字体，也就说在终端中不会出现排版错误，这款字体你可以在<a target="_blank" rel="noopener" href="https://github.com/be5invis/Sarasa-Gothic/releases">这里下载</a>。</p>
+<h2 id="第三步：改造终端的配置文件"><a href="#第三步：改造终端的配置文件" class="headerlink" title="第三步：改造终端的配置文件"></a>第三步：改造终端的配置文件</h2><p><code>Windows Terminal</code> 的配置文件储存在 <code>~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json</code> 这个 <code>json</code> 文件中，在代码编辑器中打开并编辑（比如 VS Code）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; This file was initially generated by Windows Terminal 1.0.1401.0</span><br><span class="line">&#x2F;&#x2F; It should still be usable in newer versions, but newer versions might have additional</span><br><span class="line">&#x2F;&#x2F; settings, help text, or changes that you will not see unless you clear this file</span><br><span class="line">&#x2F;&#x2F; and let us generate a new one for you.</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; To view the default settings, hold &quot;alt&quot; while clicking on the &quot;Settings&quot; button.</span><br><span class="line">&#x2F;&#x2F; For documentation on these settings, see: https:&#x2F;&#x2F;aka.ms&#x2F;terminal-documentation</span><br><span class="line">&#123;</span><br><span class="line">  &quot;$schema&quot;: &quot;https:&#x2F;&#x2F;aka.ms&#x2F;terminal-profiles-schema&quot;,</span><br><span class="line"></span><br><span class="line">  &quot;defaultProfile&quot;: &quot;&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;&quot;,</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; You can add more global application settings here.</span><br><span class="line">  &#x2F;&#x2F; To learn more about global settings, visit https:&#x2F;&#x2F;aka.ms&#x2F;terminal-global-settings</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; If enabled, selections are automatically copied to your clipboard.</span><br><span class="line">  &quot;copyOnSelect&quot;: false,</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; If enabled, formatted data is also copied to your clipboard</span><br><span class="line">  &quot;copyFormatting&quot;: false,</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; A profile specifies a command to execute paired with information about how it should look and feel.</span><br><span class="line">  &#x2F;&#x2F; Each one of them will appear in the &#39;New Tab&#39; dropdown,</span><br><span class="line">  &#x2F;&#x2F;   and can be invoked from the commandline with &#96;wt.exe -p xxx&#96;</span><br><span class="line">  &#x2F;&#x2F; To learn more about profiles, visit https:&#x2F;&#x2F;aka.ms&#x2F;terminal-profile-settings</span><br><span class="line">  &quot;profiles&quot;: &#123;</span><br><span class="line">    &quot;defaults&quot;: &#123;</span><br><span class="line">      &#x2F;&#x2F; Put settings here that you want to apply to all profiles.</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;list&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &#x2F;&#x2F; Make changes here to the powershell.exe profile.</span><br><span class="line">        &quot;guid&quot;: &quot;&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;Windows PowerShell&quot;,</span><br><span class="line">        &quot;commandline&quot;: &quot;powershell.exe&quot;,</span><br><span class="line">        &quot;hidden&quot;: false,</span><br><span class="line">        &#x2F;&#x2F;以下是新增加的配置项</span><br><span class="line">        &quot;closeOnExit&quot;: true,</span><br><span class="line">        &quot;colorScheme&quot;: &quot;Dracula&quot;, &#x2F;&#x2F;颜色主题名称,就是schemes下面的每个实例的 name 值</span><br><span class="line">        &quot;cursorColor&quot;: &quot;#ffffff&quot;, &#x2F;&#x2F;光标颜色</span><br><span class="line">        &quot;cursorShape&quot;: &quot;filledBox&quot;, &#x2F;&#x2F;光标类型  可选 bar empytBox filledBox vintage</span><br><span class="line">        &quot;fontFace&quot;: &quot;Sarasa Term SC&quot;, &#x2F;&#x2F;字体名称  安装字体时的字体名称</span><br><span class="line">        &quot;fontSize&quot;: 12, &#x2F;&#x2F;字体大小</span><br><span class="line">        &quot;historySize&quot;: 8001,</span><br><span class="line">        &#x2F;&#x2F; &quot;icon&quot; : &quot;D:\\image\\phone.jpg&quot;,     &#x2F;&#x2F;程序的小图标，也就是在标题栏和新建中显示的图标地址</span><br><span class="line">        &#x2F;&#x2F; &quot;backgroundImage&quot;: &quot;D:\\image\\bga.jpg&quot;,  &#x2F;&#x2F;配置背景图片地址</span><br><span class="line">        &quot;acrylicOpacity&quot;: 0.75, &#x2F;&#x2F;不透明度，值越大，背景就越浓，否则就越淡</span><br><span class="line">        &#x2F;&#x2F; &quot;backgroundImageOpacity&quot;: 0.25,      &#x2F;&#x2F;背景图片的透明度</span><br><span class="line">        &quot;padding&quot;: &quot;0, 0, 0, 0&quot;,</span><br><span class="line">        &quot;snapOnInput&quot;: true,</span><br><span class="line">        &quot;startingDirectory&quot;: &quot;%USERPROFILE%&quot;,</span><br><span class="line">        &quot;useAcrylic&quot;: true, &#x2F;&#x2F;是否开启毛玻璃特效，值为false的时候就没有毛玻璃特效</span><br><span class="line">        &quot;tabTitle&quot;: &quot;chessYu&quot; &#x2F;&#x2F;标签名称</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &#x2F;&#x2F; Make changes here to the cmd.exe profile.</span><br><span class="line">        &quot;guid&quot;: &quot;&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;命令提示符&quot;,</span><br><span class="line">        &quot;commandline&quot;: &quot;cmd.exe&quot;,</span><br><span class="line">        &quot;hidden&quot;: false</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;guid&quot;: &quot;&#123;b453ae62-4e3d-5e58-b989-0a998ec441b8&#125;&quot;,</span><br><span class="line">        &quot;hidden&quot;: false,</span><br><span class="line">        &quot;name&quot;: &quot;Azure Cloud Shell&quot;,</span><br><span class="line">        &quot;source&quot;: &quot;Windows.Terminal.Azure&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; Add custom color schemes to this array.</span><br><span class="line">  &#x2F;&#x2F; To learn more about color schemes, visit https:&#x2F;&#x2F;aka.ms&#x2F;terminal-color-schemes</span><br><span class="line">  &quot;schemes&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;name&quot;: &quot;Dracula&quot;,</span><br><span class="line">      &quot;black&quot;: &quot;#000000&quot;,</span><br><span class="line">      &quot;red&quot;: &quot;#ff5555&quot;,</span><br><span class="line">      &quot;green&quot;: &quot;#50fa7b&quot;,</span><br><span class="line">      &quot;yellow&quot;: &quot;#f1fa8c&quot;,</span><br><span class="line">      &quot;blue&quot;: &quot;#bd93f9&quot;,</span><br><span class="line">      &quot;purple&quot;: &quot;#ff79c6&quot;,</span><br><span class="line">      &quot;cyan&quot;: &quot;#8be9fd&quot;,</span><br><span class="line">      &quot;white&quot;: &quot;#bbbbbb&quot;,</span><br><span class="line">      &quot;brightBlack&quot;: &quot;#555555&quot;,</span><br><span class="line">      &quot;brightRed&quot;: &quot;#ff5555&quot;,</span><br><span class="line">      &quot;brightGreen&quot;: &quot;#50fa7b&quot;,</span><br><span class="line">      &quot;brightYellow&quot;: &quot;#f1fa8c&quot;,</span><br><span class="line">      &quot;brightBlue&quot;: &quot;#bd93f9&quot;,</span><br><span class="line">      &quot;brightPurple&quot;: &quot;#ff79c6&quot;,</span><br><span class="line">      &quot;brightCyan&quot;: &quot;#8be9fd&quot;,</span><br><span class="line">      &quot;brightWhite&quot;: &quot;#ffffff&quot;,</span><br><span class="line">      &quot;background&quot;: &quot;#1e1f29&quot;,</span><br><span class="line">      &quot;foreground&quot;: &quot;#f8f8f2&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;name&quot;: &quot;Ubuntu&quot;,</span><br><span class="line">      &quot;black&quot;: &quot;#2e3436&quot;,</span><br><span class="line">      &quot;red&quot;: &quot;#cc0000&quot;,</span><br><span class="line">      &quot;green&quot;: &quot;#4e9a06&quot;,</span><br><span class="line">      &quot;yellow&quot;: &quot;#c4a000&quot;,</span><br><span class="line">      &quot;blue&quot;: &quot;#3465a4&quot;,</span><br><span class="line">      &quot;purple&quot;: &quot;#75507b&quot;,</span><br><span class="line">      &quot;cyan&quot;: &quot;#06989a&quot;,</span><br><span class="line">      &quot;white&quot;: &quot;#d3d7cf&quot;,</span><br><span class="line">      &quot;brightBlack&quot;: &quot;#555753&quot;,</span><br><span class="line">      &quot;brightRed&quot;: &quot;#ef2929&quot;,</span><br><span class="line">      &quot;brightGreen&quot;: &quot;#8ae234&quot;,</span><br><span class="line">      &quot;brightYellow&quot;: &quot;#fce94f&quot;,</span><br><span class="line">      &quot;brightBlue&quot;: &quot;#729fcf&quot;,</span><br><span class="line">      &quot;brightPurple&quot;: &quot;#ad7fa8&quot;,</span><br><span class="line">      &quot;brightCyan&quot;: &quot;#34e2e2&quot;,</span><br><span class="line">      &quot;brightWhite&quot;: &quot;#eeeeec&quot;,</span><br><span class="line">      &quot;background&quot;: &quot;#300a24&quot;,</span><br><span class="line">      &quot;foreground&quot;: &quot;#eeeeec&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;name&quot;: &quot;AdventureTime&quot;,</span><br><span class="line">      &quot;black&quot;: &quot;#050404&quot;,</span><br><span class="line">      &quot;red&quot;: &quot;#bd0013&quot;,</span><br><span class="line">      &quot;green&quot;: &quot;#4ab118&quot;,</span><br><span class="line">      &quot;yellow&quot;: &quot;#e7741e&quot;,</span><br><span class="line">      &quot;blue&quot;: &quot;#0f4ac6&quot;,</span><br><span class="line">      &quot;purple&quot;: &quot;#665993&quot;,</span><br><span class="line">      &quot;cyan&quot;: &quot;#70a598&quot;,</span><br><span class="line">      &quot;white&quot;: &quot;#f8dcc0&quot;,</span><br><span class="line">      &quot;brightBlack&quot;: &quot;#4e7cbf&quot;,</span><br><span class="line">      &quot;brightRed&quot;: &quot;#fc5f5a&quot;,</span><br><span class="line">      &quot;brightGreen&quot;: &quot;#9eff6e&quot;,</span><br><span class="line">      &quot;brightYellow&quot;: &quot;#efc11a&quot;,</span><br><span class="line">      &quot;brightBlue&quot;: &quot;#1997c6&quot;,</span><br><span class="line">      &quot;brightPurple&quot;: &quot;#9b5953&quot;,</span><br><span class="line">      &quot;brightCyan&quot;: &quot;#c8faf4&quot;,</span><br><span class="line">      &quot;brightWhite&quot;: &quot;#f6f5fb&quot;,</span><br><span class="line">      &quot;background&quot;: &quot;#1f1d45&quot;,</span><br><span class="line">      &quot;foreground&quot;: &quot;#f8dcc0&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; Add custom keybindings to this array.</span><br><span class="line">  &#x2F;&#x2F; To unbind a key combination from your defaults.json, set the command to &quot;unbound&quot;.</span><br><span class="line">  &#x2F;&#x2F; To learn more about keybindings, visit https:&#x2F;&#x2F;aka.ms&#x2F;terminal-keybindings</span><br><span class="line">  &quot;keybindings&quot;: [</span><br><span class="line">    &#x2F;&#x2F; Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.</span><br><span class="line">    &#x2F;&#x2F; These two lines additionally bind them to Ctrl+C and Ctrl+V.</span><br><span class="line">    &#x2F;&#x2F; To learn more about selection, visit https:&#x2F;&#x2F;aka.ms&#x2F;terminal-selection</span><br><span class="line">    &#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;copy&quot;, &quot;singleLine&quot;: false &#125;, &quot;keys&quot;: &quot;ctrl+c&quot; &#125;,</span><br><span class="line">    &#123; &quot;command&quot;: &quot;paste&quot;, &quot;keys&quot;: &quot;ctrl+v&quot; &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; Press Ctrl+Shift+F to open the search box</span><br><span class="line">    &#123; &quot;command&quot;: &quot;find&quot;, &quot;keys&quot;: &quot;ctrl+shift+f&quot; &#125;,</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; Press Alt+Shift+D to open a new pane.</span><br><span class="line">    &#x2F;&#x2F; - &quot;split&quot;: &quot;auto&quot; makes this pane open in the direction that provides the most surface area.</span><br><span class="line">    &#x2F;&#x2F; - &quot;splitMode&quot;: &quot;duplicate&quot; makes the new pane use the focused pane&#39;s profile.</span><br><span class="line">    &#x2F;&#x2F; To learn more about panes, visit https:&#x2F;&#x2F;aka.ms&#x2F;terminal-panes</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;command&quot;: &#123;</span><br><span class="line">        &quot;action&quot;: &quot;splitPane&quot;,</span><br><span class="line">        &quot;split&quot;: &quot;auto&quot;,</span><br><span class="line">        &quot;splitMode&quot;: &quot;duplicate&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;keys&quot;: &quot;alt+shift+d&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第四步：选颜色主题"><a href="#第四步：选颜色主题" class="headerlink" title="第四步：选颜色主题"></a>第四步：选颜色主题</h2><p>配置文件内置了几个颜色主题，并且都是亮色的，很不符合一些人的胃口，这时候我们就需要在 <a target="_blank" rel="noopener" href="https://github.com/mbadolato/iTerm2-Color-Schemes">mbadolato/iTerm2-Color-Schemes</a> 这个仓库中寻找自己喜欢的颜色主题，这里颜色主题有足足两百多个，选完自己喜欢的，就可以到仓库的 <a target="_blank" rel="noopener" href="https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal">windowsterminal</a> 文件夹里面下载适用于 <code>Windows Terminal</code> 的格式。选好之后，粘贴到 <code>schemes</code> 这个数组里，然后在想应用的配置文件里的 <code>colorScheme</code> 设置为你新粘贴的主题的名字。保存后 <code>Windows Terminal</code> 是实时更新的，看看最终的配置效果。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>给我买一杯咖啡</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/blog/uploads/images/wechat.JPG" alt="牧野ξ 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/blog/uploads/images/alipay.JPG" alt="牧野ξ 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/blog/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+              <a href="/blog/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"><i class="fa fa-tag"></i> 软件</a>
+              <a href="/blog/tags/%E8%AE%BE%E7%BD%AE/" rel="tag"><i class="fa fa-tag"></i> 设置</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/blog/2021/02/18/es6-websocket/" rel="prev" title="ES6 Class 封装原生 Websocket">
+                  <i class="fa fa-chevron-left"></i> ES6 Class 封装原生 Websocket
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/blog/2021/05/27/interview-formatted/" rel="next" title="知识点梳理">
+                  知识点梳理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div><script src="/blog/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">牧野ξ</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script><script src="/blog/js/next-boot.js"></script>
+
+  
+<script src="/blog/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css">
+
+<script class="next-config" data-name="gitalk" type="application/json">{&quot;enable&quot;:true,&quot;github_id&quot;:&quot;shunichio&quot;,&quot;repo&quot;:&quot;blog&quot;,&quot;client_id&quot;:&quot;c3cc68364f4467a2a082&quot;,&quot;client_secret&quot;:&quot;980bc7da5a170dbc25288db00b6d74d5cbd3d392&quot;,&quot;admin_user&quot;:&quot;shunichio&quot;,&quot;distraction_free_mode&quot;:true,&quot;proxy&quot;:&quot;https:&#x2F;&#x2F;cors-anywhere.azm.workers.dev&#x2F;https:&#x2F;&#x2F;github.com&#x2F;login&#x2F;oauth&#x2F;access_token&quot;,&quot;language&quot;:&quot;zh-CN&quot;,&quot;js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1.7.2&#x2F;dist&#x2F;gitalk.min.js&quot;,&quot;path_md5&quot;:&quot;e146ec4d75c63720e681a00c432a2fd9&quot;}</script>
+<script src="/blog/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
